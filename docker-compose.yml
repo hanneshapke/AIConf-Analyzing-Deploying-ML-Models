@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  jupyter:
+    build:
+      context: ./docker
+      dockerfile: jupyter.Dockerfile
+    ports:
+      - "8001:8001"
+    volumes: 
+        - ./notebooks:/notebooks
+        - ./models:/models
